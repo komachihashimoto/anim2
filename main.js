@@ -19,15 +19,15 @@ function createBlocks() {
       blocks.style.width = blockSize + 'px';
       blocks.style.top = (i * blockSize) + 'px';
       blocks.style.left = (j * blockSize) + 'px';
-        // 周辺のブロックにアニメーションを適用
-      
       container.appendChild(blocks);
     }
   }
 }
 
+
 createBlocks();
 window.addEventListener('resize', createBlocks);
+
 
 let timeline = anime.timeline({
   loop: true
@@ -44,7 +44,13 @@ timeline
   targets: '.block',
   scale: 0.5,
   rotate: '5turn',
+  duration: 3000,
+  borderRadius: '20%',
+})
+.add({
+  targets: '.block',
+  scale: 1,
+  rotate: '5turn',
   duration: 5000,
-  direction: 'alternate',
-  borderRadius: '50%',
+  borderRadius: '0%',
 });
