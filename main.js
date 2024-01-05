@@ -1,7 +1,7 @@
 'use strict';
 
 const container = document.querySelector(".container");
-const blockSize = 50;
+const blockSize = 30;
 
 function createBlocks() {
   while (container.firstChild) {
